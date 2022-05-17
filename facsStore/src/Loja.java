@@ -1,24 +1,36 @@
+
+import java.util.ArrayList;
+
 /**
  *
  * @author Bernardo, Lucas Gabriel, Victoria
  */
-public class Loja {
-    private int qtdProduto;
-    Produto[] produtos;
-    
-    public Loja(int qtdProduto) {
-        produtos = new Produto[qtdProduto];
-    }
-    
+public class Loja 
+{
+    private ArrayList<Produto> produtos = new ArrayList<Produto>();
+     
     public void addProduto(Produto produto) {
-        for(int i = 0; i < produtos.length; i++) {
-            if(produtos[i] == null) {
-                produtos[i] = produto;
-            }
-        }
+        produto.alterarProduto();
+        produtos.add(produto);
     }
     
+    public Produto buscarItem(int codigoProduto) {
+        Produto a = null;
+        for (Produto item : produtos) {
+            if (codigoProduto == item.getCodigo()) {
+               a = item;
+            } 
+        }
+        return a;
+    }
     
+    public void pesquisarProdutoCodigo(int codigoProduto) {
+        Produto a = buscarItem(codigoProduto);
+        a.alterarProduto();
+    }
     
-    
+    public void excluirProdutoCodigo(int codigoProduto) {
+        Produto a = buscarItem(codigoProduto);
+        produtos.remove(a);
+    }
 }
