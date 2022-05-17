@@ -9,7 +9,7 @@ public class Loja
 {
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
      
-    public void addProduto(Produto produto) {
+    public void cadastrarProduto(Produto produto) {
         produto.alterarProduto();
         produtos.add(produto);
     }
@@ -25,6 +25,11 @@ public class Loja
     }
     
     public void pesquisarProdutoCodigo(int codigoProduto) {
+        Produto a = buscarItem(codigoProduto);
+        a.imprimir();
+    }
+    
+    public void alterarProdutoCodigo(int codigoProduto) {
         Produto a = buscarItem(codigoProduto);
         a.alterarProduto();
     }
