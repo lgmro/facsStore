@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /**
  *
  * @author Bernardo, Victoria, Lucas Gabriel
@@ -19,6 +22,30 @@ public class Produto
         this.cor = cor;
         this.tipo = tipo;
         this.valor = valor;
+    }
+    
+    public void imprimir() {
+        System.out.println("Código: " + codigo);
+        System.out.println("Nome: " + nome);
+        System.out.println("Marca: " + marca);
+        System.out.println("Cor: " + cor);
+        System.out.println("Tipo: " + tipo);
+        System.out.println("Valor: " + valor);
+    }
+    public void alterarProduto() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Novo código: ");
+        setCodigo(entrada.nextInt());
+        System.out.println("Novo nome: ");
+        setNome(entrada.nextLine());
+        System.out.println("Nova marca: ");
+        setMarca(entrada.nextLine());
+        System.out.println("Nova cor: ");
+        setCor(entrada.nextLine());
+        System.out.println("Novo tipo: ");
+        setTipo(entrada.nextLine());
+        System.out.println("Novo valor: ");
+        setValor(entrada.nextFloat());
     }
 
     public int getCodigo() 
