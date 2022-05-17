@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class Oculos extends Produto {
     
     private String tipoLentes, composicaoLentes, composicaoArmacao;
@@ -33,6 +36,21 @@ public class Oculos extends Produto {
         this.composicaoArmacao = composicaoArmacao;
     }
     
-    
+    public void imprimir() {
+        super.imprimir();
+        System.out.println("Tipo de lentes: " + tipoLentes);
+        System.out.println("Composição das lentes: " + composicaoLentes);
+        System.out.println("Compisição da armação: " + composicaoArmacao);
+    }
+    public void alterarProduto() {
+        Scanner entrada = new Scanner(System.in);
+        super.alterarProduto();
+        System.out.println("Novo tipo de lentes: ");
+        setTipoLentes(entrada.nextLine());
+        System.out.println("Nova composição das lentes: ");
+        setComposicaoLentes(entrada.nextLine());
+        System.out.println("Nova composição da armação: ");
+        setComposicaoArmacao(entrada.nextLine());
+    }
     
 }
