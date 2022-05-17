@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class Roupas extends Produto {
     
     private String tamanho,tipoManga;
@@ -24,6 +27,19 @@ public class Roupas extends Produto {
         this.tipoManga = tipoManga;
     }
     
+    public void alterarProduto() {
+        Scanner entrada = new Scanner(System.in);
+        super.alterarProduto();
+        System.out.println("Novo Tamanho: ");
+        setTamanho(entrada.nextLine());
+        System.out.println("Novo Tipo de Manga: ");
+        setTipoManga(entrada.nextLine());
+    }
     
+    public void imprimir() {
+        super.imprimir();
+        System.out.println("Tamanho: " + tamanho);
+        System.out.println("Tipo de Manga: " + tipoManga);
+    }
     
 }
