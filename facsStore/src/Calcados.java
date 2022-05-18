@@ -2,11 +2,14 @@
 import java.util.Scanner;
 
 public class Calcados extends Produto {
-    
+
     private int numero;
     private String materialInterno;
-    
-    public Calcados(){};
+
+    public Calcados() {
+    }
+
+    ;
 
     public Calcados(int numero, String materialInterno, int codigo, String nome, String marca, String cor, String tipo, float valor) {
         super(codigo, nome, marca, cor, tipo, valor);
@@ -29,12 +32,13 @@ public class Calcados extends Produto {
     public void setMaterialInterno(String materialInterno) {
         this.materialInterno = materialInterno;
     }
-    
+
     public void imprimir() {
         super.imprimir();
         System.out.println("Número: " + numero);
         System.out.println("Material interno: " + materialInterno);
     }
+
     public void criarProduto() {
         Scanner entrada = new Scanner(System.in);
         super.criarProduto();
@@ -43,13 +47,22 @@ public class Calcados extends Produto {
         System.out.println("Informe o tipo do material interno: ");
         setMaterialInterno(entrada.nextLine());
     }
-    public void alterarProduto() {
+
+    public void alterarProduto(int opcao) {
         Scanner entrada = new Scanner(System.in);
-        super.alterarProduto();
-        System.out.println("Novo número: ");
-        setNumero(entrada.nextInt());
-        System.out.println("Novo material interno: ");
-        setMaterialInterno(entrada.nextLine());
+        super.alterarProduto(opcao);
+        switch (opcao) {
+            case 7:
+                System.out.println("Novo número: ");
+                setNumero(entrada.nextInt());
+                break;
+            case 8:
+                System.out.println("Novo material interno: ");
+                setMaterialInterno(entrada.nextLine());
+                break;
+            default:
+                System.out.println("Não encontrado");
+                break;
+        }
     }
-    
 }

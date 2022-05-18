@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Roupas extends Produto {
     
     private String tamanho,tipoManga;
-    
     public Roupas(){};
 
     public Roupas(String tamanho, String tipoManga, int codigo, String nome, String marca, String cor, String tipo, float valor) {
@@ -37,13 +36,23 @@ public class Roupas extends Produto {
         System.out.println("Informe o tipo de Manga: ");
         setTipoManga(entrada.nextLine());
     }
-    public void alterarProduto() {
+
+    public void alterarProduto(int opcao) {
         Scanner entrada = new Scanner(System.in);
-        super.alterarProduto();
-        System.out.println("Novo Tamanho: ");
-        setTamanho(entrada.nextLine());
-        System.out.println("Novo Tipo de Manga: ");
-        setTipoManga(entrada.nextLine());
+        super.alterarProduto(opcao);
+        switch (opcao) {
+            case 7:
+                System.out.println("Novo Tamanho: ");
+                setTamanho(entrada.nextLine());
+                break;
+            case 8:
+                System.out.println("Novo Tipo de Manga: ");
+                setTipoManga(entrada.nextLine());
+                break;
+            default:
+                System.out.println("Não encontrado");
+                break;
+        }
     }
     
     public void imprimir() {
