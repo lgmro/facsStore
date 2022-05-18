@@ -13,6 +13,8 @@ public class Produto
     private String cor;
     private String tipo;
     private float valor;
+    
+    public Produto(){};
 
     public Produto(int codigo, String nome, String marca, String cor, String tipo, float valor) 
     {
@@ -32,18 +34,19 @@ public class Produto
         System.out.println("Tipo: " + tipo);
         System.out.println("Valor: " + valor);
     }
+    
     public void alterarProduto() {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Novo código: ");
         setCodigo(entrada.nextInt());
         System.out.println("Novo nome: ");
-        setNome(entrada.nextLine());
+        setNome(entrada.next());
         System.out.println("Nova marca: ");
-        setMarca(entrada.nextLine());
+        setMarca(entrada.next());
         System.out.println("Nova cor: ");
-        setCor(entrada.nextLine());
+        setCor(entrada.next());
         System.out.println("Novo tipo: ");
-        setTipo(entrada.nextLine());
+        setTipo(entrada.next());
         System.out.println("Novo valor: ");
         setValor(entrada.nextFloat());
     }

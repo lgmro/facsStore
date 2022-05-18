@@ -2,6 +2,8 @@ public class Calcados extends Produto {
     
     private int numero;
     private String materialInterno;
+    
+    public Calcados(){};
 
     public Calcados(int numero, String materialInterno, int codigo, String nome, String marca, String cor, String tipo, float valor) {
         super(codigo, nome, marca, cor, tipo, valor);
