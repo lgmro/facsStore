@@ -9,5 +9,8 @@
  * @author 1272115763
  */
 public class Principal {
+    public static void main(String[] args) {
+        
+    }
     
 }
