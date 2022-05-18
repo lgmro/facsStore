@@ -44,6 +44,7 @@ public class Oculos extends Produto {
         System.out.println("Composição das lentes: " + composicaoLentes);
         System.out.println("Compisição da armação: " + composicaoArmacao);
     }
+
     public void criarProduto() {
         Scanner entrada = new Scanner(System.in);
         super.criarProduto();
@@ -55,15 +56,25 @@ public class Oculos extends Produto {
         setComposicaoArmacao(entrada.nextLine());
     }
 
-    public void alterarProduto() {
+    public void alterarProduto(int opcao) {
         Scanner entrada = new Scanner(System.in);
-        super.alterarProduto();
-        System.out.println("Novo tipo de lentes: ");
-        setTipoLentes(entrada.nextLine());
-        System.out.println("Nova composição das lentes: ");
-        setComposicaoLentes(entrada.nextLine());
-        System.out.println("Nova composição da armação: ");
-        setComposicaoArmacao(entrada.nextLine());
+        super.alterarProduto(opcao);
+        switch (opcao) {
+            case 7:
+                System.out.println("Novo tipo de lentes: ");
+                setTipoLentes(entrada.nextLine());
+                break;
+            case 8:
+                System.out.println("Nova composição das lentes: ");
+                setComposicaoLentes(entrada.nextLine());
+                break;
+            case 9:
+                System.out.println("Nova composição da armação: ");
+                setComposicaoArmacao(entrada.nextLine());
+                break;
+            default:
+                System.out.println("Não encontrado");
+                break;
+        }
     }
-    
 }

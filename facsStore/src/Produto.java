@@ -5,7 +5,7 @@ import java.util.Scanner;
  *
  * @author Bernardo, Victoria, Lucas Gabriel
  */
-abstract class Produto
+public class Produto
 {
     private int codigo;
     private String nome;
@@ -48,20 +48,35 @@ abstract class Produto
         System.out.println("Informe valor: ");
         setValor(entrada.nextFloat());
     }
-    public void alterarProduto() {
+
+    public void alterarProduto(int opcao) {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Novo código: ");
-        setCodigo(entrada.nextInt());
-        System.out.println("Novo nome: ");
-        setNome(entrada.next());
-        System.out.println("Nova marca: ");
-        setMarca(entrada.next());
-        System.out.println("Nova cor: ");
-        setCor(entrada.next());
-        System.out.println("Novo tipo: ");
-        setTipo(entrada.next());
-        System.out.println("Novo valor: ");
-        setValor(entrada.nextFloat());
+        switch (opcao) {
+            case 1:
+                System.out.println("Novo código: ");
+                setCodigo(entrada.nextInt());
+                break;
+            case 2:
+                System.out.println("Novo nome: ");
+                setNome(entrada.next());
+                break;
+            case 3:
+                System.out.println("Nova marca: ");
+                setMarca(entrada.next());
+                break;
+            case 4:
+                System.out.println("Nova cor: ");
+                setCor(entrada.next());
+                break;
+            case 5:
+                System.out.println("Novo tipo: ");
+                setTipo(entrada.next());
+                break;
+            case 6:
+                System.out.println("Novo valor: ");
+                setValor(entrada.nextFloat());
+                break;
+        }
     }
 
     public int getCodigo() 

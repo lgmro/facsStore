@@ -34,8 +34,19 @@ public class Loja
     }
     
     public void alterarProdutoCodigo(int codigoProduto) {
+        Scanner entrada = new Scanner(System.in);
         Produto a = buscarItem(codigoProduto);
-        a.alterarProduto();
+
+        System.out.println("**** ALTERAÇÕES POSSÍVEIS ****");
+        System.out.println("Óculos: 1 - Código  2 - Nome  3 - Marca  4 - Cor  5 - Tipo 6 - Valor  7 - Tipo lente 8 - Composição lente 9 - Composição armação");
+        System.out.println(" -------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("Calçado: 1 - Código  2 - Nome  3 - Marca  4 - Cor  5 - Tipo 6 - Valor  7 - Número 8 - Material interno");
+        System.out.println(" -------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("Roupas: 1 - Código  2 - Nome  3 - Marca  4 - Cor  5 - Tipo 6 - Valor  7 - Tamanho 8 - Tipo de manga");
+        System.out.println(" -------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("Informe o número do atributo que você quer alterar: ");
+        int opcao = entrada.nextInt();
+        a.alterarProduto(opcao);
     }
     
     public void excluirProdutoCodigo(int codigoProduto) {
