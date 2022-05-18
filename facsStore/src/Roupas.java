@@ -1,6 +1,8 @@
 public class Roupas extends Produto {
     
     private String tamanho,tipoManga;
+    
+    public Roupas(){};
 
     public Roupas(String tamanho, String tipoManga, int codigo, String nome, String marca, String cor, String tipo, float valor) {
         super(codigo, nome, marca, cor, tipo, valor);

@@ -2,6 +2,8 @@ public class Oculos extends Produto {
     
     private String tipoLentes, composicaoLentes, composicaoArmacao;
 
+    public Oculos(){};
+    
     public Oculos(String tipoLentes, String composicaoLentes, String composicaoArmacao, int codigo, String nome, String marca, String cor, String tipo, float valor) {
         super(codigo, nome, marca, cor, tipo, valor);
         this.tipoLentes = tipoLentes;

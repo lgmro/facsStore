@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -8,13 +9,13 @@ import java.util.ArrayList;
 public class Loja 
 {
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
-     
+
     public void cadastrarProduto(Produto produto) {
         produto.alterarProduto();
         produtos.add(produto);
     }
     
-    public Produto buscarItem(int codigoProduto) {
+    private Produto buscarItem(int codigoProduto) {
         Produto a = null;
         for (Produto item : produtos) {
             if (codigoProduto == item.getCodigo()) {
