@@ -69,7 +69,6 @@ public class Principal {
                     System.out.println("Número inválido");
                     break; 
         }
-        
     }
    
     public static int selecaoMenuPrincipal() {

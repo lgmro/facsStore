@@ -29,6 +29,14 @@ public class Roupas extends Produto {
         this.tipoManga = tipoManga;
     }
     
+    public void criarProduto() {
+        Scanner entrada = new Scanner(System.in);
+        super.criarProduto();
+        System.out.println("Informe o tamanho: ");
+        setTamanho(entrada.nextLine());
+        System.out.println("Informe o tipo de Manga: ");
+        setTipoManga(entrada.nextLine());
+    }
     public void alterarProduto() {
         Scanner entrada = new Scanner(System.in);
         super.alterarProduto();

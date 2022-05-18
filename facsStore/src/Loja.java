@@ -11,7 +11,7 @@ public class Loja
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
 
     public void cadastrarProduto(Produto produto) {
-        produto.alterarProduto();
+        produto.criarProduto();
         produtos.add(produto);
     }
     
@@ -20,14 +20,17 @@ public class Loja
         for (Produto item : produtos) {
             if (codigoProduto == item.getCodigo()) {
                a = item;
-            } 
+            }
         }
         return a;
     }
-    
     public void pesquisarProdutoCodigo(int codigoProduto) {
         Produto a = buscarItem(codigoProduto);
-        a.imprimir();
+        if (a == null) {
+            System.out.println("Produto não encontrado");
+        } else {
+            a.imprimir();
+        }
     }
     
     public void alterarProdutoCodigo(int codigoProduto) {

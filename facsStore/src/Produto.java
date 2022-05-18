@@ -5,7 +5,7 @@ import java.util.Scanner;
  *
  * @author Bernardo, Victoria, Lucas Gabriel
  */
-public class Produto 
+abstract class Produto
 {
     private int codigo;
     private String nome;
@@ -13,10 +13,8 @@ public class Produto
     private String cor;
     private String tipo;
     private float valor;
-    
     public Produto(){};
-
-    public Produto(int codigo, String nome, String marca, String cor, String tipo, float valor) 
+    public Produto(int codigo, String nome, String marca, String cor, String tipo, float valor)
     {
         this.codigo = codigo;
         this.nome = nome;
@@ -25,7 +23,7 @@ public class Produto
         this.tipo = tipo;
         this.valor = valor;
     }
-    
+
     public void imprimir() {
         System.out.println("Código: " + codigo);
         System.out.println("Nome: " + nome);
@@ -34,7 +32,22 @@ public class Produto
         System.out.println("Tipo: " + tipo);
         System.out.println("Valor: " + valor);
     }
-    
+
+    public void criarProduto() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Informe código: ");
+        setCodigo(entrada.nextInt());
+        System.out.println("Informe nome: ");
+        setNome(entrada.next());
+        System.out.println("Informe marca: ");
+        setMarca(entrada.next());
+        System.out.println("Informe cor: ");
+        setCor(entrada.next());
+        System.out.println("Informe tipo: ");
+        setTipo(entrada.next());
+        System.out.println("Informe valor: ");
+        setValor(entrada.nextFloat());
+    }
     public void alterarProduto() {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Novo código: ");

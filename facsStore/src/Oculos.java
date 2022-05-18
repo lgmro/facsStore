@@ -44,6 +44,17 @@ public class Oculos extends Produto {
         System.out.println("Composição das lentes: " + composicaoLentes);
         System.out.println("Compisição da armação: " + composicaoArmacao);
     }
+    public void criarProduto() {
+        Scanner entrada = new Scanner(System.in);
+        super.criarProduto();
+        System.out.println("Informe o tipo de lentes: ");
+        setTipoLentes(entrada.nextLine());
+        System.out.println("Informe a composição das lentes: ");
+        setComposicaoLentes(entrada.nextLine());
+        System.out.println("Informe a composição da armação: ");
+        setComposicaoArmacao(entrada.nextLine());
+    }
+
     public void alterarProduto() {
         Scanner entrada = new Scanner(System.in);
         super.alterarProduto();
