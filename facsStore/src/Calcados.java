@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class Calcados extends Produto {
     
     private int numero;
@@ -27,6 +30,18 @@ public class Calcados extends Produto {
         this.materialInterno = materialInterno;
     }
     
-    
+    public void imprimir() {
+        super.imprimir();
+        System.out.println("Número: " + numero);
+        System.out.println("Material interno: " + materialInterno);
+    }
+    public void alterarProduto() {
+        Scanner entrada = new Scanner(System.in);
+        super.alterarProduto();
+        System.out.println("Novo número: ");
+        setNumero(entrada.nextInt());
+        System.out.println("Novo material interno: ");
+        setMaterialInterno(entrada.nextLine());
+    }
     
 }
