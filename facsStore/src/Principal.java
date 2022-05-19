@@ -33,15 +33,21 @@ public class Principal {
                     loja.alterarProdutoCodigo(codigoProduto);
                     break;
                 case 4:
+                    loja.listarProdutos();
+                    break;
+                case 5:
                     System.out.println("Informe o código do produto: ");
                     int codigoExcluir = entrada.nextInt();
                     loja.excluirProdutoCodigo(codigoExcluir);
+                    break;
+                case 6:
+                    System.out.println("Saindo do sistema...");
                     break;
                 default:
                     System.out.println("Número inválido");
                     break; 
                 }
-        }while(opcao != 5);
+        }while(opcao != 6);
     }
     
     public static void selecaoTipoProduto(Loja loja) {
@@ -78,8 +84,9 @@ public class Principal {
         System.out.println("1 - Cadastrar produto");
         System.out.println("2 - Pesquisar produto");
         System.out.println("3 - Alterar produto");
-        System.out.println("4 - Excluir produto");
-        System.out.println("5 - Sair");
+        System.out.println("4 - Listar todos os produtos");
+        System.out.println("5 - Excluir produto");
+        System.out.println("6 - Sair");
         opcao = entrada.nextInt();
         return opcao;
     }

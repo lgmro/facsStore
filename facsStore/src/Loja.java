@@ -32,6 +32,12 @@ public class Loja
             a.imprimir();
         }
     }
+
+    public void listarProdutos() {
+        for (Produto item : produtos) {
+            item.imprimir();
+        }
+    }
     
     public void alterarProdutoCodigo(int codigoProduto) {
         Scanner entrada = new Scanner(System.in);
@@ -51,6 +57,10 @@ public class Loja
     
     public void excluirProdutoCodigo(int codigoProduto) {
         Produto a = buscarItem(codigoProduto);
-        produtos.remove(a);
+        if (a == null) {
+            System.out.println("Produto não encontrado");
+        } else {
+            produtos.remove(a);
+        }
     }
 }
