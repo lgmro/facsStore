@@ -45,7 +45,7 @@ public class Calcados extends Produto {
         System.out.println("Informe o número: ");
         setNumero(entrada.nextInt());
         System.out.println("Informe o tipo do material interno: ");
-        setMaterialInterno(entrada.nextLine());
+        setMaterialInterno(entrada.next());
     }
 
     public void alterarProduto(int opcao) {
