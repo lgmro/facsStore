@@ -15,6 +15,7 @@ public class Principal {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         Loja loja = new Loja();
+        criacaoProdutosAutomatico(loja);
          int opcao;
         do {
             opcao = selecaoMenuPrincipal();
@@ -89,5 +90,9 @@ public class Principal {
         System.out.println("6 - Sair");
         opcao = entrada.nextInt();
         return opcao;
+    }
+    public static void criacaoProdutosAutomatico(Loja loja) {
+            Produto oculosSol = new Roupas("P", "Curta", 1, "Calça leg", "Sem marca", "Preta", "Calças", 70.0f);
+            loja.adicionarProduto(oculosSol);
     }
 }

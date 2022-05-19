@@ -14,6 +14,10 @@ public class Loja
         produto.criarProduto();
         produtos.add(produto);
     }
+
+    public void adicionarProduto(Produto produto) {
+        produtos.add(produto);
+    }
     
     private Produto buscarItem(int codigoProduto) {
         Produto a = null;
