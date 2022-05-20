@@ -43,6 +43,7 @@ public class Oculos extends Produto {
         System.out.println("Tipo de lentes: " + tipoLentes);
         System.out.println("Composição das lentes: " + composicaoLentes);
         System.out.println("Compisição da armação: " + composicaoArmacao);
+        System.out.println("------------------------------------ \n");
     }
 
     public void criarProduto() {
@@ -54,11 +55,13 @@ public class Oculos extends Produto {
         setComposicaoLentes(entrada.nextLine());
         System.out.println("Informe a composição da armação: ");
         setComposicaoArmacao(entrada.nextLine());
+        System.out.println("------------------------------------ \n");
     }
 
     public void alterarProduto(int opcao) {
         Scanner entrada = new Scanner(System.in);
         super.alterarProduto(opcao);
+        if(opcao > 6)
         switch (opcao) {
             case 7:
                 System.out.println("Novo tipo de lentes: ");

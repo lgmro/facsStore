@@ -37,6 +37,7 @@ public class Calcados extends Produto {
         super.imprimir();
         System.out.println("Número: " + numero);
         System.out.println("Material interno: " + materialInterno);
+        System.out.println("------------------------------------ \n");
     }
 
     public void criarProduto() {
@@ -51,6 +52,7 @@ public class Calcados extends Produto {
     public void alterarProduto(int opcao) {
         Scanner entrada = new Scanner(System.in);
         super.alterarProduto(opcao);
+        if(opcao > 6)
         switch (opcao) {
             case 7:
                 System.out.println("Novo número: ");

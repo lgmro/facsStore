@@ -2,16 +2,16 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author Bernardo, Lucas Gabriel, Victoria
- */
 public class Loja 
 {
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
 
     public void cadastrarProduto(Produto produto) {
         produto.criarProduto();
+        produtos.add(produto);
+    }
+
+    public void adicionarProduto(Produto produto) {
         produtos.add(produto);
     }
     
