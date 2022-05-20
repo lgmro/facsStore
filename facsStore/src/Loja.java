@@ -2,10 +2,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author Bernardo, Lucas Gabriel, Victoria
- */
 public class Loja 
 {
     private ArrayList<Produto> produtos = new ArrayList<Produto>();

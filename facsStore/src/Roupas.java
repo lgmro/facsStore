@@ -27,6 +27,13 @@ public class Roupas extends Produto {
     public void setTipoManga(String tipoManga) {
         this.tipoManga = tipoManga;
     }
+
+    public void imprimir() {
+        super.imprimir();
+        System.out.println("Tamanho: " + tamanho);
+        System.out.println("Tipo de Manga: " + tipoManga);
+        System.out.println("------------------------------------ \n");
+    }
     
     public void criarProduto() {
         Scanner entrada = new Scanner(System.in);
@@ -40,6 +47,7 @@ public class Roupas extends Produto {
     public void alterarProduto(int opcao) {
         Scanner entrada = new Scanner(System.in);
         super.alterarProduto(opcao);
+        if(opcao > 6)
         switch (opcao) {
             case 7:
                 System.out.println("Novo Tamanho: ");
@@ -54,11 +62,4 @@ public class Roupas extends Produto {
                 break;
         }
     }
-    
-    public void imprimir() {
-        super.imprimir();
-        System.out.println("Tamanho: " + tamanho);
-        System.out.println("Tipo de Manga: " + tipoManga);
-    }
-    
 }

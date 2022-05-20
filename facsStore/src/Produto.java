@@ -1,11 +1,7 @@
 
 import java.util.Scanner;
 
-/**
- *
- * @author Bernardo, Victoria, Lucas Gabriel
- */
-public class Produto
+abstract class Produto
 {
     private int codigo;
     private String nome;

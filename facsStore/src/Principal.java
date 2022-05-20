@@ -1,16 +1,6 @@
 
 import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author 1272115763
- */
 public class Principal {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
@@ -92,7 +82,25 @@ public class Principal {
         return opcao;
     }
     public static void criacaoProdutosAutomatico(Loja loja) {
-            Produto oculosSol = new Roupas("P", "Curta", 1, "Calça leg", "Sem marca", "Preta", "Calças", 70.0f);
+            Produto calcaLeg = new Roupas("P", "Longa", 1, "Calça_leg", "Diesel", "Preta", "Calças", 70.0f);
+            loja.adicionarProduto(calcaLeg);
+
+            Produto oculosGrau = new Oculos("Monofocal", "Acrílico", "Metal", 2, "Óculos_De_Grau_Gassi", "Gassi", "Preto", "Grau", 500.00f);
+            loja.adicionarProduto(oculosGrau);
+
+            Produto tenisNike = new Calcados(40,"Têxtil", 3,"Tênis_Nike_Revolution", "Nike", "Branco", "Tênis", 600.00f);
+            loja.adicionarProduto(tenisNike);
+
+            Produto camisaHulk = new Roupas("G", "Curta", 4, "Camisa_Do_Hulk", "Marvel", "Verde_e_Preta", "Camisas", 100.0f);
+            loja.adicionarProduto(camisaHulk);
+
+            Produto oculosSol = new Oculos("Polarizada", "PVA", "Plástico", 5, "Óculos_De_Sol_Rayban", "Rayban", "Azul", "Sem_Grau", 300.00f);
             loja.adicionarProduto(oculosSol);
+
+            Produto sandaliaHavaianas = new Calcados(39,"Borracha", 6,"Chinelo_Havaianas_Masculino", "Havaiana", "Preto", "Chinelo", 30.00f);
+            loja.adicionarProduto(sandaliaHavaianas);
+
+            Produto bermudaMoletom = new Roupas("M", "Curta", 7, "Bermuda_Moletom_Vermelha", "Polo", "Vermelha", "Bermudas", 120.0f);
+            loja.adicionarProduto(bermudaMoletom);
     }
 }
