@@ -1,2 +1,5 @@
 /facsStore/nbproject/private/
 /facsStore/build/
+.idea/
+facsStore.iml
+out/
