@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-abstract class Produto
+public class Produto
 {
     private int codigo;
     private String nome;

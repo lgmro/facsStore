@@ -3,10 +3,15 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
         Loja loja = new Loja();
         criacaoProdutosAutomatico(loja);
-         int opcao;
+        criacaoClientesAutomatico(loja);
+        menus(loja);
+    }
+
+    private static void menus(Loja loja) {
+        Scanner entrada = new Scanner(System.in);
+        int opcao;
         do {
             opcao = selecaoMenuPrincipal();
             switch(opcao) {
@@ -32,15 +37,24 @@ public class Principal {
                     loja.excluirProdutoCodigo(codigoExcluir);
                     break;
                 case 6:
+                    loja.cadastrarCliente();
+                    break;
+                case 7:
+                    loja.listarClientes();
+                    break;
+                case 8:
+                    loja.vendaProduto();
+                    break;
+                case 9:
                     System.out.println("Saindo do sistema...");
                     break;
                 default:
                     System.out.println("Número inválido");
                     break; 
                 }
-        }while(opcao != 6);
+        }while(opcao != 9);
     }
-    
+
     public static void selecaoTipoProduto(Loja loja) {
         Scanner entrada = new Scanner(System.in);
         int opcao = 0;
@@ -77,7 +91,10 @@ public class Principal {
         System.out.println("3 - Alterar produto");
         System.out.println("4 - Listar todos os produtos");
         System.out.println("5 - Excluir produto");
-        System.out.println("6 - Sair");
+        System.out.println("6 - Cadastrar cliente");
+        System.out.println("7 - Listar clientes");
+        System.out.println("8 - Vender produto");
+        System.out.println("9 - Sair");
         opcao = entrada.nextInt();
         return opcao;
     }
@@ -102,5 +119,12 @@ public class Principal {
 
             Produto bermudaMoletom = new Roupas("M", "Curta", 7, "Bermuda_Moletom_Vermelha", "Polo", "Vermelha", "Bermudas", 120.0f);
             loja.adicionarProduto(bermudaMoletom);
+    }
+
+    public static void criacaoClientesAutomatico(Loja loja) {
+        Cliente Maria = new Cliente("Maria", "Madalena", "234", 600);
+        loja.adicionarCliente(Maria);
+        Cliente John = new Cliente("John", "Jones", "123", 300);
+        loja.adicionarCliente(John);
     }
 }
