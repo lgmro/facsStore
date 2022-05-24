@@ -1,11 +1,7 @@
 
 import java.util.Scanner;
 
-/**
- *
- * @author Bernardo, Victoria, Lucas Gabriel
- */
-public class Produto 
+public class Produto//clase base de produto
 {
     private int codigo;
     private String nome;
@@ -13,8 +9,8 @@ public class Produto
     private String cor;
     private String tipo;
     private float valor;
-
-    public Produto(int codigo, String nome, String marca, String cor, String tipo, float valor) 
+    public Produto(){};
+    public Produto/*Construtor do produto*/(int codigo, String nome, String marca, String cor, String tipo, float valor)
     {
         this.codigo = codigo;
         this.nome = nome;
@@ -23,7 +19,7 @@ public class Produto
         this.tipo = tipo;
         this.valor = valor;
     }
-    
+
     public void imprimir() {
         System.out.println("Código: " + codigo);
         System.out.println("Nome: " + nome);
@@ -31,22 +27,53 @@ public class Produto
         System.out.println("Cor: " + cor);
         System.out.println("Tipo: " + tipo);
         System.out.println("Valor: " + valor);
-    }
-    public void alterarProduto() {
+    }//metodo para imprimir um produtor
+
+    public void criarProduto() {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Novo código: ");
+        System.out.println("Informe código: ");
         setCodigo(entrada.nextInt());
-        System.out.println("Novo nome: ");
-        setNome(entrada.nextLine());
-        System.out.println("Nova marca: ");
-        setMarca(entrada.nextLine());
-        System.out.println("Nova cor: ");
-        setCor(entrada.nextLine());
-        System.out.println("Novo tipo: ");
-        setTipo(entrada.nextLine());
-        System.out.println("Novo valor: ");
+        System.out.println("Informe nome: ");
+        setNome(entrada.next());
+        System.out.println("Informe marca: ");
+        setMarca(entrada.next());
+        System.out.println("Informe cor: ");
+        setCor(entrada.next());
+        System.out.println("Informe tipo: ");
+        setTipo(entrada.next());
+        System.out.println("Informe valor: ");
         setValor(entrada.nextFloat());
-    }
+    }//metodo para criar o produto
+
+    public void alterarProduto(int opcao) {
+        Scanner entrada = new Scanner(System.in);
+        switch (opcao) {
+            case 1:
+                System.out.println("Novo código: ");
+                setCodigo(entrada.nextInt());
+                break;
+            case 2:
+                System.out.println("Novo nome: ");
+                setNome(entrada.next());
+                break;
+            case 3:
+                System.out.println("Nova marca: ");
+                setMarca(entrada.next());
+                break;
+            case 4:
+                System.out.println("Nova cor: ");
+                setCor(entrada.next());
+                break;
+            case 5:
+                System.out.println("Novo tipo: ");
+                setTipo(entrada.next());
+                break;
+            case 6:
+                System.out.println("Novo valor: ");
+                setValor(entrada.nextFloat());
+                break;
+        }
+    }//metodo para um dado especifico do produto
 
     public int getCodigo() 
     {
@@ -107,4 +134,4 @@ public class Produto
     {
         this.valor = valor;
     }  
-}
+}//todos os gets e sets

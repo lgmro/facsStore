@@ -1,59 +1,15 @@
-# facsStore
+# FacsStore
 
-Loja:
-Produto[12] produtos;
-int qtdProdutos;
+Projeto para a criação de um sistema em java para uma loja, para a matéria de Programação de soluções computacionais.
 
-construtor(int qtdProdutos); <-- Inicializar o array;
+Universidade Salvador - Unifacs
 
-addProduto(Produto produto) {
-  		
-}
-
-imprimirProduto(Produto produto) {}
-
-
-pesquisarItem(int codigo): Produto {
-	Depois de pesquisar chame a função imprimirProduto(Produto produto)
-}
-
-alterarProduto(int codigo) {
-	pesquisarItem(int codigo)
-}
-
-
-
-abstract Produto
-codigo int;
-nome String ;
-marca String;
-valor float;
-cor String;
-tipo String;
-
-
-Task: Implementar construtor, set and get;
-
-Roupa:
-tamanho String;
-tipoManga String;
-
-Calçado:
-numero int;
-materialInterno String;
-
-Oculos:
-tipoLentes String;
-composicaoLentes String;
-composicaoArmacao String;
-
-
-Menu:
-Cadastrar item(); Qual tipo?
-Pesquisar item();
-Alterar item();
-Excluir item();
-Sair();
+Alunos: 
+- Bernardo - https://github.com/bmlogs64;
+- Gabriel - https://github.com/Gabrieloliv55;
+- Lucas Moreno - https://github.com/lucasnmo;
+- Lucas Gabriel - https://github.com/lgmro;
+- Victoria.
 
 
 
