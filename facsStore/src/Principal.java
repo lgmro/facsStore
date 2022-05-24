@@ -1,15 +1,15 @@
 
 import java.util.Scanner;
 
-public class Principal {
-    public static void main(String[] args) {
+public class Principal {//Essa é a classe principal onde vai rodar os metodos
+    public static void main(String[] args) {//Metodo main para rodar o sistema
         Loja loja = new Loja();
         criacaoProdutosAutomatico(loja);
         criacaoClientesAutomatico(loja);
         menus(loja);
     }
 
-    private static void menus(Loja loja) {
+    private static void menus(Loja loja) {//Esse metodo serve para executar as ações de cada menu.
         Scanner entrada = new Scanner(System.in);
         int opcao;
         do {
@@ -55,7 +55,7 @@ public class Principal {
         }while(opcao != 9);
     }
 
-    public static void selecaoTipoProduto(Loja loja) {
+    public static void selecaoTipoProduto(Loja loja) {//Esse metodo cadastra algum tipo de item
         Scanner entrada = new Scanner(System.in);
         int opcao = 0;
         System.out.println("**** TIPOS PRODUTOS ****");
@@ -82,7 +82,7 @@ public class Principal {
         }
     }
    
-    public static int selecaoMenuPrincipal() {
+    public static int selecaoMenuPrincipal() {//Esse metodo imprime o menu
         Scanner entrada = new Scanner(System.in);
         int opcao = 0;
         System.out.println("**** MENU ****");
@@ -98,7 +98,7 @@ public class Principal {
         opcao = entrada.nextInt();
         return opcao;
     }
-    public static void criacaoProdutosAutomatico(Loja loja) {
+    public static void criacaoProdutosAutomatico(Loja loja) {//Esse metodo já deixa alguns itens prontos
             Produto calcaLeg = new Roupas("P", "Longa", 1, "Calça_leg", "Diesel", "Preta", "Calças", 70.0f);
             loja.adicionarProduto(calcaLeg);
 
@@ -121,7 +121,7 @@ public class Principal {
             loja.adicionarProduto(bermudaMoletom);
     }
 
-    public static void criacaoClientesAutomatico(Loja loja) {
+    public static void criacaoClientesAutomatico(Loja loja) {//Esse metodo já deixa alguns clientes prontos
         Cliente Maria = new Cliente("Maria", "Madalena", "234", 600);
         loja.adicionarCliente(Maria);
         Cliente John = new Cliente("John", "Jones", "123", 300);
