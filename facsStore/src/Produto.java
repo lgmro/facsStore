@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class Produto
+public class Produto//clase base de produto
 {
     private int codigo;
     private String nome;
@@ -10,7 +10,7 @@ public class Produto
     private String tipo;
     private float valor;
     public Produto(){};
-    public Produto(int codigo, String nome, String marca, String cor, String tipo, float valor)
+    public Produto/*Construtor do produto*/(int codigo, String nome, String marca, String cor, String tipo, float valor)
     {
         this.codigo = codigo;
         this.nome = nome;
@@ -27,7 +27,7 @@ public class Produto
         System.out.println("Cor: " + cor);
         System.out.println("Tipo: " + tipo);
         System.out.println("Valor: " + valor);
-    }
+    }//metodo para imprimir um produtor
 
     public void criarProduto() {
         Scanner entrada = new Scanner(System.in);
@@ -43,7 +43,7 @@ public class Produto
         setTipo(entrada.next());
         System.out.println("Informe valor: ");
         setValor(entrada.nextFloat());
-    }
+    }//metodo para criar o produto
 
     public void alterarProduto(int opcao) {
         Scanner entrada = new Scanner(System.in);
@@ -73,7 +73,7 @@ public class Produto
                 setValor(entrada.nextFloat());
                 break;
         }
-    }
+    }//metodo para um dado especifico do produto
 
     public int getCodigo() 
     {
@@ -134,4 +134,4 @@ public class Produto
     {
         this.valor = valor;
     }  
-}
+}//todos os gets e sets
