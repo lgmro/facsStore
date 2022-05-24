@@ -3,7 +3,7 @@ import java.lang.ref.Cleaner;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Loja
+public class Loja//Classe da loja
 {
     private ArrayList<Produto> produtos = new ArrayList<>();
     private ArrayList<Cliente> clientes = new ArrayList<>();
@@ -11,11 +11,11 @@ public class Loja
     public void cadastrarProduto(Produto produto) {
         produto.criarProduto();
         produtos.add(produto);
-    }
+    }//metodo para cadastrar o produto
 
     public void adicionarProduto(Produto produto) {
         produtos.add(produto);
-    }
+    }//metodo para adicionar um produto
 
     private Produto buscarItem(int codigoProduto) {
         Produto a = null;
@@ -25,7 +25,7 @@ public class Loja
             }
         }
         return a;
-    }
+    }//metodo para encontrar um item
     public void pesquisarProdutoCodigo(int codigoProduto) {
         Produto a = buscarItem(codigoProduto);
         if (a == null) {
@@ -33,13 +33,13 @@ public class Loja
         } else {
             a.imprimir();
         }
-    }
+    }//metodo para encontrar o produto pelo codigo
 
     public void listarProdutos() {
         for (Produto item : produtos) {
             item.imprimir();
         }
-    }
+    }//metodo para listar todos os produtos 
 
     public void alterarProdutoCodigo(int codigoProduto) {
         Scanner entrada = new Scanner(System.in);
@@ -55,7 +55,7 @@ public class Loja
         System.out.println("Informe o número do atributo que você quer alterar: ");
         int opcao = entrada.nextInt();
         a.alterarProduto(opcao);
-    }
+    }//metodo para alterar o produto pelo codigo
 
     public void excluirProdutoCodigo(int codigoProduto) {
         Produto a = buscarItem(codigoProduto);
@@ -64,11 +64,11 @@ public class Loja
         } else {
             produtos.remove(a);
         }
-    }
+    }//metodo para excluir produto pelo codigo
 
     public void adicionarCliente(Cliente cliente) {
         clientes.add(cliente);
-    }
+    }//metodo para adicionar um cliente
 
     public void cadastrarCliente() {
         Scanner entrada = new Scanner(System.in);
@@ -86,7 +86,7 @@ public class Loja
 
         Cliente cliente =  new Cliente(nome, sobrenome, cpf, carteira);
         clientes.add(cliente);
-    }
+    }//metodo para cadastrar o cliente
 
      public Cliente buscarCliente(String cpfCliente) {
         Cliente a = null;
@@ -96,13 +96,13 @@ public class Loja
             }
         }
          return a;
-    }
+    }//metodo para encontrar o cliente pelo cpf
 
     public void listarClientes() {
         for (Cliente cliente : clientes) {
             cliente.imprimir();
         }
-    }
+    }//metodo para listar todos os clientes
 
     public void vendaProduto() {
         Scanner entrada = new Scanner(System.in);
@@ -129,5 +129,5 @@ public class Loja
                 System.out.println("Cliente não encontrado");
             }
         }
-    }
+    }//metodo para vender os produtos para o cliente
 }

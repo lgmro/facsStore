@@ -1,13 +1,13 @@
 
 import java.util.Scanner;
 
-public class Oculos extends Produto {
+public class Oculos extends Produto {//Classe para ser um tipo de item
     
     private String tipoLentes, composicaoLentes, composicaoArmacao;
 
     public Oculos(){};
     
-    public Oculos(String tipoLentes, String composicaoLentes, String composicaoArmacao, int codigo, String nome, String marca, String cor, String tipo, float valor) {
+    public Oculos/*Construtor do oculos*/(String tipoLentes, String composicaoLentes, String composicaoArmacao, int codigo, String nome, String marca, String cor, String tipo, float valor) {
         super(codigo, nome, marca, cor, tipo, valor);
         this.tipoLentes = tipoLentes;
         this.composicaoLentes = composicaoLentes;
@@ -36,9 +36,9 @@ public class Oculos extends Produto {
 
     public void setComposicaoArmacao(String composicaoArmacao) {
         this.composicaoArmacao = composicaoArmacao;
-    }
+    }//todos os gets e sets
     
-    public void imprimir() {
+    public void imprimir() {//metodo imprime o item tipo oculos
         super.imprimir();
         System.out.println("Tipo de lentes: " + tipoLentes);
         System.out.println("Composição das lentes: " + composicaoLentes);
@@ -46,7 +46,7 @@ public class Oculos extends Produto {
         System.out.println("------------------------------------ \n");
     }
 
-    public void criarProduto() {
+    public void criarProduto() {//Metodo que cria o produto
         Scanner entrada = new Scanner(System.in);
         super.criarProduto();
         System.out.println("Informe o tipo de lentes: ");
@@ -58,7 +58,7 @@ public class Oculos extends Produto {
         System.out.println("------------------------------------ \n");
     }
 
-    public void alterarProduto(int opcao) {
+    public void alterarProduto(int opcao) {//metado para alterar o produto
         Scanner entrada = new Scanner(System.in);
         super.alterarProduto(opcao);
         if(opcao > 6)
