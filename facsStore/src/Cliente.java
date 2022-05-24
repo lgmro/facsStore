@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
-public class Cliente {
+public class Cliente {//Classe do cliente
    
     private String nome, sobrenome, cpf;
     private float quantidadeDinheiro;
     private ArrayList<Produto> carrinhoDeCompras = new ArrayList<>();
 
-    public Cliente(String nome, String sobrenome, String cpf, float quantidadeDinheiro) {
+    public Cliente(String nome, String sobrenome, String cpf, float quantidadeDinheiro) {//construtor do cliente
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
@@ -55,9 +55,9 @@ public class Cliente {
 
     public void setProdutoNoCarrinho(Produto produto) {
         this.carrinhoDeCompras.add(produto);
-    }
+    }//todos os gets e stes
 
-    public void imprimir() {
+    public void imprimir() {//metodo que imprime todos os dados do cliente
         System.out.println("Nome: " + this.nome);
         System.out.println("Sobrenome: " + this.sobrenome);
         System.out.println("Cpf: " + this.cpf);
