@@ -9,7 +9,7 @@ Alunos:
 - Gabriel - https://github.com/Gabrieloliv55;
 - Lucas Moreno - https://github.com/lucasnmo;
 - Lucas Gabriel - https://github.com/lgmro;
-- Victoria.
+ -Victoria    -  https://github.com/viccod;  
 
 
 
