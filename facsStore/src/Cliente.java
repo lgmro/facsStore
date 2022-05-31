@@ -67,6 +67,7 @@ public class Cliente implements Comparable<Cliente> {//Classe do cliente
             for (Produto produtosComprados : carrinhoDeCompras) {
                 System.out.println("Produto comprado: " + produtosComprados.getNome());
                 System.out.println("Valor do produto: " + produtosComprados.getValor());
+                System.out.println("Operação da Compra: " + produtosComprados.getTipoOperacao());
                 System.out.println(" ******* ");
             }
         } else {

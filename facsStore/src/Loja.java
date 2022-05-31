@@ -108,8 +108,16 @@ public class Loja//Classe da loja
     public void vendaProduto() {
         Scanner entrada = new Scanner(System.in);
         int codigoProduto;
+        int tipoCompra;
+        
         System.out.println("Informe o código do produto a ser vendido");
         codigoProduto = entrada.nextInt();
+        
+        System.out.println("1 - Débito 2 - Crédito 3 - Pix");
+        System.out.println("Informe qual a operação para a compra: ");
+        tipoCompra = entrada.nextInt();
+        
+//        codigoProduto = entrada.nextInt();
         Produto y = buscarItem(codigoProduto);
         if (y == null) {
             System.out.println("Produto não encontrado");
@@ -121,6 +129,7 @@ public class Loja//Classe da loja
                 float valorAtualizado = x.getQuantidadeDinheiro() - y.getValor();
                 if(valorAtualizado <= x.getQuantidadeDinheiro() && valorAtualizado >= 0) {
                     x.setProdutoNoCarrinho(y);
+                    y.setTipoOperacao(tipoCompra);
                     x.setQuantidadeDinheiro(valorAtualizado);
                     produtos.remove(y);
                 } else {

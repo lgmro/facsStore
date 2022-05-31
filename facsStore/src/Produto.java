@@ -9,6 +9,25 @@ public class Produto//clase base de produto
     private String cor;
     private String tipo;
     private float valor;
+    private int tipoOperacao;
+
+    public String getTipoOperacao() {
+        String operacao = "";
+        if (tipoOperacao == 1) {
+            operacao = "Débito";
+        } else if (tipoOperacao == 2) {
+            operacao = "Crédito";
+        } else {
+            operacao = "Pix";
+        }
+        
+        return operacao;
+    }
+
+    public void setTipoOperacao(int tipoOperacao) {
+        this.tipoOperacao = tipoOperacao;
+    }
+    
     public Produto(){};
     public Produto/*Construtor do produto*/(int codigo, String nome, String marca, String cor, String tipo, float valor)
     {
