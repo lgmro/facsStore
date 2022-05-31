@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Loja//Classe da loja
@@ -97,7 +98,8 @@ public class Loja//Classe da loja
          return a;
     }//metodo para encontrar o cliente pelo cpf
 
-    public void listarClientes() {
+    public void listarClientes() { 
+        Collections.sort(clientes);
         for (Cliente cliente : clientes) {
             cliente.imprimir();
         }

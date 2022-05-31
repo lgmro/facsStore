@@ -126,5 +126,11 @@ public class Principal {//Essa é a classe principal onde vai rodar os metodos
         loja.adicionarCliente(Maria);
         Cliente John = new Cliente("John", "Jones", "123", 300);
         loja.adicionarCliente(John);
+        Cliente Amelia = new Cliente("Amelia", "Kleber", "12453", 8989);
+        loja.adicionarCliente(Amelia);
+        Cliente Kleber = new Cliente("Kleber", "Casimiro", "6767", 89);
+        loja.adicionarCliente(Kleber);
+        Cliente JohnJonas = new Cliente("John", "Jonas", "6217", 900);
+        loja.adicionarCliente(JohnJonas);
     }
 }

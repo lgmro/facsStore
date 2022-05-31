@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Cliente {//Classe do cliente
+public class Cliente implements Comparable<Cliente> {//Classe do cliente
    
     private String nome, sobrenome, cpf;
     private float quantidadeDinheiro;
@@ -73,5 +73,10 @@ public class Cliente {//Classe do cliente
             System.out.println("Cliente ainda não efetuou compras na loja");
         }
         System.out.println("--------------------------------------------------");
+    }
+
+    @Override
+    public int compareTo(Cliente o) {
+        return (this.nome + this.sobrenome).compareTo((o.getNome() + o.getSobrenome()));
     }
 }
